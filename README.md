@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/kevencb/recipe-page)
-- Live Site URL: [Development](https://kevencb.github.io/recipe-page/)
+- Solution URL: [Github](https://github.com/kevencb/product-preview-card)
+- Live Site URL: [Development](https://kevencb.github.io/product-preview-card/)
 
 ## My process
 
