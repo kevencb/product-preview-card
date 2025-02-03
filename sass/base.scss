@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,100..900,1;1,9..144,100..900,1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+$darkCyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+$veryDarkBlue: hsl(212, 21%, 14%);
+$darkGrayishBlue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+$title: 'Fraunces';
+$text: 'Montserrat';
+
+/* Mixins */
+
+@mixin pre-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $darkGrayishBlue;
+    font-family: $text;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.2rem;
+    letter-spacing: .5rem;
+}
+
+@mixin title{
+    font-size: 3.2rem;
+    line-height: 100%;
+    color: $veryDarkBlue;
+    font-weight: 700;
+    font-family: $title;
+    margin-bottom: 1.6rem;
+}
+
+@mixin text{
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    color: $darkGrayishBlue;
+    font-weight: 500;
+    font-family: $text;
+}
+
+@mixin price{
+    @include title;
+    color: $darkCyan;
+    margin-bottom: 0;
+}
+
+@mixin button{
+    width: 100%;
+    padding: 1.5rem;
+    background-color: $darkCyan;
+    color: $white;
+    font-family: $text;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: .8rem;
+}

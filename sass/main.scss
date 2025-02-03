@@ -1,0 +1,105 @@
+@import 'base.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    img{
+        display: block;
+    }
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: $cream;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    overflow: hidden;
+    align-items: center;
+    max-width: 60rem;
+    .product{
+        border-radius: 1rem;
+        overflow: hidden;
+        background-color: $white;
+        @media (min-width: 1260px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        &__cover{
+            margin-bottom: 0px;
+            padding: 0;
+            img{
+                width: 100%;
+            }
+        }
+        &__body{
+            background-color: $white;
+            padding: 2.4rem;
+            @media (min-width: 1260px) {
+                padding: 3.2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &-pre{
+                @include pre-title;
+            }
+            &-title{
+                @include title;
+            }
+            &-content{
+                @include text;
+            }
+            &-price{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-top: 2.4rem;
+                @include price;
+                span{
+                    @include text;
+                    text-decoration: line-through;
+                }
+            }
+            &-button{
+                @include button;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.2rem;
+                margin-top: 2rem;
+            }
+            &-button::before{
+                margin-top: 4px;
+                content: url('../images/icon-cart.svg');
+            }
+            &-button:hover{
+                cursor: pointer;
+                background-color: $veryDarkBlue;
+            }
+        }
+    }
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    font-family: $text;
+    margin-top: 3.2rem;
+    a { 
+        color: $darkCyan;
+        font-weight: 700;
+    }
+}
